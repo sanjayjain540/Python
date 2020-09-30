@@ -1,23 +1,17 @@
 
-thickness = int(input()) #This must be an odd number
-c = 'H'
-
-#Top Cone
-for i in range(thickness):
-    print((c*i).rjust(thickness-1)+c+(c*i).ljust(thickness-1))
-
-#Top Pillars
-for i in range(thickness+1):
-    print((c*thickness).center(thickness*2)+(c*thickness).center(thickness*6))
-
-#Middle Belt
-for i in range((thickness+1)//2):
-    print((c*thickness*5).center(thickness*6))    
-
-#Bottom Pillars
-for i in range(thickness+1):
-    print((c*thickness).center(thickness*2)+(c*thickness).center(thickness*6))    
-
-#Bottom Cone
-for i in range(thickness):
-    print(((c*(thickness-i-1)).rjust(thickness)+c+(c*(thickness-i-1)).ljust(thickness)).rjust(thickness*6))
+Datatypes
+Built-in Types
+Booleans
+bool: A boolean value of either True or False. Logical operations like and, or, not can be performed on booleans.
+x or y # if x is False then y otherwise x
+x and y # if x is False then x otherwise y
+not x # if x is True then False, otherwise True
+In Python 2.x and in Python 3.x, a boolean is also an int. The bool type is a subclass of the int type and True and
+False are its only instances:
+issubclass(bool, int) # True
+isinstance(True, bool) # True
+isinstance(False, bool) # True
+If boolean values are used in arithmetic operations, their integer values (1 and 0 for True and False) will be used to
+return an integer result:
+True + False == 1 # 1 + 0 == 1
+True * True == 1 # 1 * 1 
